@@ -30,7 +30,7 @@
             </label>
         </div>
         <div>
-            <button type="submit" class="btn btn-warning text-body">Login</button>
+            <a href="admin/index_admin.php" type="submit" class="btn btn-warning text-body">Login</a>
         </div>
         </div>
 
