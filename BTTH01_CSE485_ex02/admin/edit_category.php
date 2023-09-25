@@ -12,7 +12,7 @@
     <?php
         include "layer_admin/header_ad.php";
         ?>
-    <div class="container">
+    <div class="container mb-5">
         <center><b>SỬA THÔNG TIN THỂ LOẠI</b></center>
         <div class="input-group mb-3 mt-4">
             <span class="input-group-text">Mã thể loại</span>
