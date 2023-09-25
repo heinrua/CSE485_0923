@@ -14,11 +14,31 @@
         <img class="col-12" src="image/poster.png" alt="">
     </div>
     <div>
-        <p class="text-primary ">TOP BÀI HÁT YÊU THÍCH</p>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="" alt="">
-            </div>
+        <center class="text-primary mt-3">TOP BÀI HÁT YÊU THÍCH</center>
+        <div class="container-fluid">
+            <ul class="navbar list-unstyled">
+                <li class="col-md-3">
+                    <img src="image/cay_la_gio.png" alt="" class= "w-100">
+                    <a href="detail.php"><center class="text-primary mt-3">Cây, lá và gió</center></a>
+                </li>
+                <li class="col-md-3">
+                    <img src="image/cuoc_song_men_thuong.png" alt="" class= "w-100">
+                    <a href=""><center class="text-primary mt-3">Cuộc sống mến thương</center></a>
+                </li>
+                <li class="col-md-3">
+                    <img src="image/long_me.png" alt="" class= "w-100">
+                    <a href=""><center class="text-primary mt-3">Lòng mẹ</center></a>
+                </li>
+                
+                <li class="col-md-3">
+                    <img src="image/Phôi_pha.png" alt="" class= "w-100">
+                    <a href=""><center class="text-primary mt-3">Phôi pha</center></a>
+                </li>
+                <li class="col-md-3">
+                    <img src="image/love_start.png" alt="" class= "w-100">
+                    <a href=""><center class="text-primary mt-3">Nơi tình yêu bắt đầu</center></a>
+                </li>
+            </ul> 
         </div>
     </div>
     <?php 
