@@ -11,21 +11,35 @@
 <body>
     <?php
         include "layer_admin/header_ad.php";
+        $ma_tloai = $_GET['id'];
+        try{
+            $conn = new PDO("mysql:host=localhost;dbname=btth01_cse485","root","");
+            $sql = "SELECT * FROM theloai_data WHERE theloai_data.ma_tloai = $ma_tloai";
+            $stmt = $conn -> prepare($sql);
+            $stmt -> execute();
+            $theloai_data = $stmt ->fetch();
+
+        }
+        catch(PDOException $e){
+            $e ->getMessage();
+        }
         ?>
-    <div class="container mb-5">
+    <div class="container">
         <center><b>SỬA THÔNG TIN THỂ LOẠI</b></center>
-        <div class="input-group mb-3 mt-4">
-            <span class="input-group-text">Mã thể loại</span>
-            <input type="text" class="form-control">
-        </div>
-        <div class="input-group mb-3 mt-4">
-            <span class="input-group-text">Tên thể loại</span>
-            <input type="text" class="form-control">
-        </div>
-        <div class="float-right">
-            <button type="button" class="btn btn-success">Lưu</button> 
-            <button type="button" class="btn btn-warning text-body">Quay lại</button>
-        </div>
+        <form action="process_edit.php" method="post">
+            <div class="input-group mb-3 mt-4">
+                <span class="input-group-text">Mã thể loại</span>
+                <input type="text" class="form-control"  value="<?php echo $theloai_data['ma_tloai']; ?>" readonly>
+            </div>
+            <div class="input-group mb-3 mt-4">
+                <span class="input-group-text">Tên thể loại</span>
+                <input type="text" class="form-control" name="ten_tloai" value="<?php echo $theloai_data['ten_tloai'];?>">
+            </div>
+            <div class="float-right">
+                <button type="button" class="btn btn-success" name="submit">Lưu</button> 
+                <a href="category.php" class="btn btn-warning text-body">Quay lại</a>
+            </div>
+        </form>
     </div>
 
     <?php
