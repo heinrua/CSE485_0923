@@ -14,14 +14,16 @@
         ?>
     <div class="container">
         <center><b>THÊM MỚI THỂ LOẠI</b></center>
-        <div class="input-group mb-3 mt-4">
-            <span class="input-group-text">Tên thể loại</span>
-            <input type="text" class="form-control">
-        </div>
-        <div class="float-right">
-            <button type="button" class="btn btn-success">Thêm</button> 
-            <button type="button" class="btn btn-warning text-body">Quay lại</button>
-        </div>
+        <form action="process_add.php" method="post">
+            <div class="input-group mb-3 mt-4">
+                <span class="input-group-text">Tên thể loại</span>
+                <input type="text" class="form-control" name="ten_tloai">
+            </div>
+            <div class="float-right">
+                <button type="submit" class="btn btn-success" name="submit">Thêm</button> 
+                <a href="category.php" class="btn btn-warning text-body">Quay lại</a>
+            </div>
+        </form>
     </div>
     <?php
         include "layer_admin/footer_ad.php";
