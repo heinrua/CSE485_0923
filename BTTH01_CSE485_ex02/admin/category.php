@@ -11,6 +11,17 @@
 <body>
     <?php
         include "layer_admin/header_ad.php";
+        try{
+            $conn = new PDO("mysql:host=localhost;dbname=btth01_cse485","root","");
+            $sql = "SELECT * FROM theloai_data";
+            $stmt = $conn -> prepare($sql);
+            $stmt -> execute();
+            $theloai_data = $stmt ->fetchAll();
+        }
+        catch(PDOException $e){
+            $e ->getMessage();
+        }
+        if (!empty($conn)) {
         ?>
     <div class="container">
     <a href="add_category.php"> <button type="submit" class="btn btn-success mt-5">Thêm mới</button></a>
@@ -24,17 +35,24 @@
             </tr>
         </thead>
         <tbody>
+            <?php
+                foreach ($theloai_data as $theloai){
+            ?>
             <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
+            <th scope="row"><?php echo $theloai['ma_tloai'];?></th>
+            <td><?php echo $theloai['ten_tloai'];?></td>
             <td><a href="edit_category.php"><i class="bi bi-pencil-square"></i></a></td>
             <td><a href=""><i class="bi bi-trash-fill"></i></a></td>
             </tr>
+            <?php }
+             ?>
         </tbody>
         </table>
     </div>
 
     <?php
+        }
+        else echo "Loi ket noi";
         include "layer_admin/footer_ad.php";
         ?>
 </body>
