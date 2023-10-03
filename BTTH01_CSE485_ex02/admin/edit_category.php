@@ -36,7 +36,7 @@
                 <input type="text" class="form-control" name="ten_tloai" value="<?php echo $theloai_data['ten_tloai'];?>">
             </div>
             <div class="float-right">
-                <button type="button" class="btn btn-success" name="submit">Lưu</button> 
+                <button type="submit" class="btn btn-success" name="submit">Lưu</button> 
                 <a href="category.php" class="btn btn-warning text-body">Quay lại</a>
             </div>
         </form>
