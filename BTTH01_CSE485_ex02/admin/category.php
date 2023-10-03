@@ -41,8 +41,8 @@
             <tr>
             <th scope="row"><?php echo $theloai['ma_tloai'];?></th>
             <td><?php echo $theloai['ten_tloai'];?></td>
-            <td><a href="edit_category.php"><i class="bi bi-pencil-square"></i></a></td>
-            <td><a href=""><i class="bi bi-trash-fill"></i></a></td>
+            <td><a href="edit_category.php?id=<?php echo $theloai['ma_tloai']; ?>"><i class="bi bi-pencil-square"></i></a></td>
+            <td><a href="delete.php?id=<?php echo $theloai['ma_tloai']; ?>"><i class="bi bi-trash-fill"></i></a></td>
             </tr>
             <?php }
              ?>
