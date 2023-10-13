@@ -1,0 +1,1 @@
+<h1>Hello</h1><?php /**PATH C:\Users\Admin\Laravel Project\project-2\resources\views/welcome.blade.php ENDPATH**/ ?>
